@@ -16,36 +16,15 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="grava.php" method='post'>
-            
-             <div class="mb-3">
-                <label for="nm_produto" class="form-label" >Nome do Produto</label>
-                <input type="text" class="form-control" name="nm_produto">
-             </div>
-             <div class="mb-3">
-                <label for="valorCompra" class="form-label">Valor de Compra</label>
-                <input type="text" class="form-control" name="valorCompra">
-             </div>
-             <div class="mb-3">
-                <label for="valorVenda" class="form-label">Valor de Venda</label>
-                <input type="text" class="form-control" name="valorVenda">
-             </div>
-             <div class="mb-3">
-                <label for="obs" class="form-label">Observação</label>
-                <textarea class='form-control' name="obs" id="obs" cols="30" rows="10"></textarea>
-             </div>
-             <div class="mb-3">
-                <label for="id_grupo" class="form-label">Id do grupo Fornecedor</label>
-                <input type="text" class="form-control" name="id_grupo">
-             </div>
-             <div class="mb-3">
-             <button type="submit" class="btn btn-primary">Enviar</button>
-             </div>
+            <div class="jumbotron">
+                <h1 class="display-4">Bem-vindo a interface do CRUD!</h1>
+                <p class="lead">CRUD da Aula do Eraldo(^^)</p>
+                <hr class="my-4">
+                <p>Escolha as funções como desejar:</p>
+                <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastrar</a>
+                <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a>
 
-             
-
-             </form>
+            </div>
             </div>
         </div>
     </div>  
