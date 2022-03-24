@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="./src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/pesquisa.css">
 
     <title>CRUD-Pesquisa</title>
   </head>
@@ -37,15 +38,16 @@
                         </form>
                     </div>
                 </nav>
-                <table class="table table-dark table-striped">
+                <table id='tabela-pesquisa' class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id Produto</th>
                             <th scope="col">Nome Produto</th>
                             <th scope="col">Valor da Compra</th>
                             <th scope="col">Valor da Venda</th>
                             <th scope="col">Observação</th>
-                            <th scope="col">Nome grupo</th>                            
+                            <th scope="col">Nome grupo</th>
+                            <th scope="col">Funções</th>                    
+
                         </tr>
                     </thead>
                     <tbody>
@@ -66,12 +68,13 @@
                             $fk_id_grupo=$linha['fk_id_grupo'];
 
                         echo "<tr>
-                            <td>$id_produto</td>
                             <td>$nm_produto</td>
                             <td>$valorCompra</td>
                             <td>$valorVenda</td>
                             <td>$obs</td>
                             <td>$fk_id_grupo</td>
+                            <td><a href='editar.php?id=$id_produto' class='btn btn-success'>Editar</a> 
+                            <td><a href='editar.php' class='btn btn-danger'>Excluir</a>
                             </tr>";
                         }
 
@@ -80,7 +83,7 @@
                 </table>
             </div>
         </div>
-        <a class="btn btn-info" href="./index.php" role="button">Voltar para Início</a>     
+        <a id="btn-voltar" class="btn btn-info" href="./index.php" role="button">Voltar para Início</a>     
     </div>  
 
     <!-- Optional JavaScript; choose one of the two! -->
