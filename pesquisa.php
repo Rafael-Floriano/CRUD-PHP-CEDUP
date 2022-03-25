@@ -74,7 +74,7 @@
                             <td>$obs</td>
                             <td>$fk_id_grupo</td>
                             <td><a href='editar.php?id=$id_produto' class='btn btn-success'>Editar</a> 
-                            <td><a href='editar.php' class='btn btn-danger'>Excluir</a>
+                            <td><a href='excluir.php?id=$id_produto' class='btn btn-danger'>Excluir</a>
                             </tr>";
                         }
 
