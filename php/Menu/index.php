@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-Cadastro</title>
   </head>
@@ -21,8 +21,10 @@
                 <p class="lead">CRUD da Aula do Eraldo(^^)</p>
                 <hr class="my-4">
                 <p>Escolha as funções como desejar:</p>
-                <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastrar</a>
-                <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a>
+                <!-- <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastro</a> -->
+                <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
+                <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
+                <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisas</a>
 
             </div>
             </div>

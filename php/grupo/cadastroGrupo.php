@@ -6,37 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-UPDATE</title>
+    <title>CRUD-Cadastro</title>
   </head>
   <body>
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-                <?php
-                    include "conexao.php";
-                    $id_produto = $_POST['id_produto'];
-                    $nm_produto = $_POST['nm_produto'];
-                    $valorCompra = $_POST['valorCompra'];
-                    $valorVenda = $_POST['valorVenda'];
-                    $obs = $_POST['obs'];
-                    $id_grupo = $_POST['id_grupo'];
+             <h1>Cadastro</h1>
+             <form class='formulario' action="gravaGrupo.php" method='post'>
+                
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
+                  <input type="text" class="form-control" name="nm_grupo">
+               </div>
+               <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">Enviar</button>             
+               </div>
+               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
 
-                    $sql="UPDATE tb_produto SET nm_produto='$nm_produto',valorCompra=$valorCompra,
-                    valorVenda=$valorVenda,obs='$obs',fk_id_grupo=$id_grupo WHERE id_produto=$id_produto";
-
-                    if (mysqli_query($mysql,$sql)) {
-                        mensagem("Produto alterado com sucesso!!",'success');
-                    } else {
-                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
-                    }
-
-                ?>
-
-                <a href="index.php" class="btn btn-primary">Voltar</a>
+             </form>
             </div>
         </div>
     </div>  

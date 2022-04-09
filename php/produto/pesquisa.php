@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/pesquisa.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/pesquisa.css">
 
     <title>CRUD-Pesquisa</title>
   </head>
@@ -83,7 +83,7 @@
                 </table>
             </div>
         </div>
-        <a id="btn-voltar" class="btn btn-info" href="./index.php" role="button">Voltar para Início</a>     
+        <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>     
     </div>  
 
     <!-- Optional JavaScript; choose one of the two! -->

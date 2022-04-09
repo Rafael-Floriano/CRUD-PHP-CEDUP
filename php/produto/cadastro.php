@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-Cadastro</title>
   </head>
@@ -45,7 +45,7 @@
              </div>
 
              
-             <a class="btn btn-info" href="./index.php" role="button">Voltar para Início</a>
+             <a class="btn btn-info" href="../menu/index.php" role="button">Voltar para Início</a>
              </form>
             </div>
         </div>

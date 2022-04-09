@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-UPDATE</title>
   </head>
   <body>
 
@@ -18,25 +18,25 @@
             <div class='col'>    
                 <?php
                     include "conexao.php";
-
+                    $id_produto = $_POST['id_produto'];
                     $nm_produto = $_POST['nm_produto'];
                     $valorCompra = $_POST['valorCompra'];
                     $valorVenda = $_POST['valorVenda'];
                     $obs = $_POST['obs'];
                     $id_grupo = $_POST['id_grupo'];
 
-                    $sql="INSERT INTO tb_produto(nm_produto,valorCompra,valorVenda,obs,fk_id_grupo) 
-                    VALUES ('$nm_produto',$valorCompra,$valorVenda,'$obs',$id_grupo)";
+                    $sql="UPDATE tb_produto SET nm_produto='$nm_produto',valorCompra=$valorCompra,
+                    valorVenda=$valorVenda,obs='$obs',fk_id_grupo=$id_grupo WHERE id_produto=$id_produto";
 
                     if (mysqli_query($mysql,$sql)) {
-                        mensagem("Produto cadastrado com sucesso!!",'success');
+                        mensagem("Produto alterado com sucesso!!",'success');
                     } else {
-                        mensagem("O cadastro não pode ser feito, tente novamente :(",'danger');
+                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
                     }
 
                 ?>
 
-                <a href="index.php" class="btn btn-primary">Voltar</a>
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

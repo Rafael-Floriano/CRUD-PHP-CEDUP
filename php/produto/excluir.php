@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="./src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-excluir</title>
   </head>
@@ -35,7 +35,7 @@
 
                     ?>
 
-                <a href="index.php" class="btn btn-primary">Voltar</a>
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  
