@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/pesquisa.css">
 
-    <title>CRUD-Pesquisa</title>
+    <title>CRUD-PesquisaGrupo-Rafinha</title>
   </head>
   <body>
 
@@ -32,7 +32,7 @@
                 <nav class="navbar navbar-light bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand">Tabela de produtos</a>
-                        <form class="d-flex" action="./pesquisa.php" method="POST">
+                        <form class="d-flex" action="./pesquisaGrupo.php" method="POST">
                             <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
@@ -41,13 +41,9 @@
                 <table id='tabela-pesquisa' class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Nome Produto</th>
-                            <th scope="col">Valor da Compra</th>
-                            <th scope="col">Valor da Venda</th>
-                            <th scope="col">Observação</th>
-                            <th scope="col">Nome grupo</th>
+                            <th scope="col">Id grupo</th>
+                            <th scope="col">Nome dos Grupo</th>
                             <th scope="col">Funções</th>                    
-
                         </tr>
                     </thead>
                     <tbody>
@@ -55,26 +51,18 @@
 
                         include '../conexao.php';
 
-                        $sql="SELECT * FROM tb_produto WHERE nm_produto LIKE '%$pesquisa%'";
+                        $sql="SELECT * FROM tb_grupo WHERE nm_grupo LIKE '%$pesquisa%'";
 
                         $dados = mysqli_query($mysql,$sql);
 
                         while ($linha=mysqli_fetch_assoc($dados)) {
-                            $id_produto=$linha['id_produto'];
-                            $nm_produto=$linha['nm_produto'];
-                            $valorCompra=$linha['valorCompra'];
-                            $valorVenda=$linha['valorVenda'];
-                            $obs=$linha['obs'];
-                            $fk_id_grupo=$linha['fk_id_grupo'];
-
+                            $id_grupo=$linha['id_grupo'];
+                            $nm_grupo=$linha['nm_grupo'];
                         echo "<tr>
-                            <td>$nm_produto</td>
-                            <td>$valorCompra</td>
-                            <td>$valorVenda</td>
-                            <td>$obs</td>
-                            <td>$fk_id_grupo</td>
-                            <td><a href='editar.php?id=$id_produto' class='btn btn-success'>Editar</a> 
-                            <td><a href='excluir.php?id=$id_produto' class='btn btn-danger'>Excluir</a>
+                            <td>$id_grupo</td>
+                            <td>$nm_grupo</td>
+                            <td><a href='editarGrupo.php?id=$id_grupo' class='btn btn-success'>Editar</a> 
+                            <td><a href='excluirGrupo.php?id=$id_grupo' class='btn btn-danger'>Excluir</a>
                             </tr>";
                         }
 

@@ -9,24 +9,35 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-excluir</title>
   </head>
   <body>
-    
+
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-            <div class="jumbotron">
-                <h1 class="display-4">Bem-vindo a interface do CRUD!</h1>
-                <p class="lead">CRUD da Aula do Eraldo(^^)</p>
-                <hr class="my-4">
-                <p>Escolha as funções como desejar:</p>
-                <!-- <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastro</a> -->
-                <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
-                <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
-                <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Pesquisas</a>
+                    
+                    <?php 
 
-            </div>
+                    include '../conexao.php';
+
+                    $id = $_GET['id'] ?? '';
+
+                    $sql = "DELETE FROM tb_grupo WHERE id_grupo=$id";
+
+                    $dados=mysqli_query($mysql,$sql);
+
+                    if ($dados) {
+                        mensagem('Dados deletados com sucesso','success');
+                    }else{
+                        mensagem('Não conseguimos deletar os dados, tente novamente mais tarde','danger');
+                    }
+
+                    header('location:pesquisaGrupo.php');
+
+                    ?>
+
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  
@@ -46,3 +57,4 @@
     -->
   </body>
 </html>
+

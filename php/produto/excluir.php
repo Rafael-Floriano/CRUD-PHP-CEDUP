@@ -19,7 +19,7 @@
                     
                     <?php 
 
-                    include 'conexao.php';
+                    include '../conexao.php';
 
                     $id = $_GET['id'] ?? '';
 

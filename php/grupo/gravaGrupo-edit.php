@@ -9,24 +9,28 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-UPDATE</title>
   </head>
   <body>
-    
+
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-            <div class="jumbotron">
-                <h1 class="display-4">Bem-vindo a interface do CRUD!</h1>
-                <p class="lead">CRUD da Aula do Eraldo(^^)</p>
-                <hr class="my-4">
-                <p>Escolha as funções como desejar:</p>
-                <!-- <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastro</a> -->
-                <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
-                <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
-                <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Pesquisas</a>
+                <?php
+                    include "../conexao.php";
+                    $id_grupo = $_POST['id_grupo'];
+                    $nm_grupo = $_POST['nm_grupo'];
+                    $sql="UPDATE tb_grupo SET nm_grupo='$nm_grupo',id_grupo=$id_grupo  WHERE id_grupo=$id_grupo";
 
-            </div>
+                    if (mysqli_query($mysql,$sql)) {
+                        mensagem("Produto alterado com sucesso!!",'success');
+                    } else {
+                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
+                    }
+
+                ?>
+
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  
