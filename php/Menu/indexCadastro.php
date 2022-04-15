@@ -24,8 +24,11 @@
                   <p>Escolha o que você quer cadastrar:</p>
                 </div>
                 <div class= "opcoes-Menu">
-                <a class="btn btn-primary btn-lg btn-funcao" href="../produto/cadastro.php" role="button">Produtos</a>
-                <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/cadastroGrupo.php" role="button">Grupos</a>
+                  <a class="btn btn-primary btn-lg btn-funcao" href="../produto/cadastro.php" role="button">Produtos</a>
+                  <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/cadastroGrupo.php" role="button">Grupos</a>
+                </div>
+                <div class="div-voltar">
+                  <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
                 </div>
               </div>
             </div>

@@ -2,6 +2,8 @@ body{
     background-color: #7289da;
 }
 
+
+
 .Menu{
     color: #FFFFFF;
     background-color: #2c2f33;
@@ -37,3 +39,8 @@ body{
     align-items: center;
     gap: 20px;
 }
+
+.div-voltar{
+    padding-top: 30px;
+}
+
