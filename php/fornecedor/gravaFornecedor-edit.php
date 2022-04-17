@@ -18,12 +18,14 @@
             <div class='col'>    
                 <?php
                     include "../conexao.php";
-                    $id_grupo = $_POST['id_grupo'];
-                    $nm_grupo = $_POST['nm_grupo'];
-                    $sql="UPDATE tb_grupo SET nm_grupo='$nm_grupo',id_grupo=$id_grupo  WHERE id_grupo=$id_grupo";
+                    $id_cliente = $_POST['id_fornecedor'];
+                    $nm_cliente = $_POST['nm_fornecedor'];
+                    $cpf_cliente = $_POST['cnpj_fornecedor'];
+                    $fk_id_cidade = $_POST['fk_id_cidade'];
+                    $sql="UPDATE tb_fornecedor SET id_fornecedor=$id_cliente,nm_fornecedor='$nm_cliente',cnpj_fornecedor='$cpf_cliente',fk_id_cidade=$fk_id_cidade WHERE id_fornecedor=$id_cliente";
 
                     if (mysqli_query($mysql,$sql)) {
-                        mensagem("Grupo alterado com sucesso!!",'success');
+                        mensagem("Fornecedor alterado com sucesso!!",'success');
                     } else {
                         mensagem("Não foi possivel alterar, tente novamente :(",'danger');
                     }

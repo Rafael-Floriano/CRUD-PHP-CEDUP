@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/pesquisa.css">
 
-    <title>CRUD-Pesquisa</title>
+    <title>CRUD-PesquisaGrupo-Rafinha</title>
   </head>
   <body>
 
@@ -32,7 +32,7 @@
                 <nav class="navbar navbar-light bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand">Tabela de produtos</a>
-                        <form class="d-flex" action="./pesquisa.php" method="POST">
+                        <form class="d-flex" action="./pesquisaFornecedor.php" method="POST">
                             <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
@@ -41,13 +41,11 @@
                 <table id='tabela-pesquisa' class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Nome Produto</th>
-                            <th scope="col">Valor da Compra</th>
-                            <th scope="col">Valor da Venda</th>
-                            <th scope="col">Observação</th>
-                            <th scope="col">Nome grupo</th>
+                            <th scope="col">Id Cliente</th>
+                            <th scope="col">Nome do cliente</th>
+                            <th scope="col">CPF do cliente</th>
+                            <th scope="col">Cidade do Cliente</th>
                             <th scope="col">Funções</th>                    
-
                         </tr>
                     </thead>
                     <tbody>
@@ -55,27 +53,25 @@
 
                         include '../conexao.php';
 
-                        $sql="SELECT pro.id_produto,pro.nm_produto,pro.valorCompra,pro.valorVenda,pro.obs, gru.nm_grupo FROM tb_produto pro INNER JOIN tb_grupo gru
-                        ON pro.fk_id_grupo=gru.id_grupo  WHERE nm_produto LIKE '%$pesquisa%'";
+                        $sql="SELECT forn.id_fornecedor,forn.nm_fornecedor,forn.cnpj_fornecedor, ci.nm_cidade FROM tb_fornecedor forn INNER JOIN
+                        tb_cidade ci ON forn.fk_id_cidade=ci.id_cidade WHERE nm_fornecedor LIKE '%$pesquisa%'";
 
                         $dados = mysqli_query($mysql,$sql);
 
                         while ($linha=mysqli_fetch_assoc($dados)) {
-                            $id_produto=$linha['id_produto'];
-                            $nm_produto=$linha['nm_produto'];
-                            $valorCompra=$linha['valorCompra'];
-                            $valorVenda=$linha['valorVenda'];
-                            $obs=$linha['obs'];
-                            $fk_id_grupo=$linha['nm_grupo'];
+                            $id_fornecedor=$linha['id_fornecedor'];
+                            $nm_fornecedor=$linha['nm_fornecedor'];
+                            $cnpj_fornecedor=$linha['cnpj_fornecedor'];
+                            $fk_id_cidade=$linha['nm_cidade'];
+
 
                         echo "<tr>
-                            <td>$nm_produto</td>
-                            <td>$valorCompra</td>
-                            <td>$valorVenda</td>
-                            <td>$obs</td>
-                            <td>$fk_id_grupo</td>
-                            <td><a href='editar.php?id=$id_produto' class='btn btn-success'>Editar</a> 
-                            <td><a href='excluir.php?id=$id_produto' class='btn btn-danger'>Excluir</a>
+                            <td>$id_fornecedor</td>
+                            <td>$nm_fornecedor</td>
+                            <td>$cnpj_fornecedor</td>
+                            <td>$fk_id_cidade</td>
+                            <td><a href='editarFornecedor.php?id=$id_fornecedor' class='btn btn-success'>Editar</a> 
+                            <td><a href='excluirFornecedor.php?id=$id_fornecedor' class='btn btn-danger'>Excluir</a>
                             </tr>";
                         }
 

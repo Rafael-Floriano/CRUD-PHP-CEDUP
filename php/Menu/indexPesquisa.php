@@ -26,6 +26,7 @@
                     <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/pesquisaGrupo.php" role="button">Grupos</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cidade/pesquisaCidade.php" role="button">Cidades</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cliente/pesquisaCliente.php" role="button">Clientes</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../fornecedor/pesquisaFornecedor.php" role="button">Fornecedores</a>
                     <a class="btn btn-info botao-voltar" href="../Menu/index.php" role="button">Voltar para Início</a>
                   </div>
                 </div>

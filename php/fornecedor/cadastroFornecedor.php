@@ -7,30 +7,37 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-UPDATE</title>
+    <title>CRUD-Cadastro</title>
   </head>
-  <body>
+  <body class="fundoCadastro">
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-                <?php
-                    include "../conexao.php";
-                    $id_grupo = $_POST['id_grupo'];
-                    $nm_grupo = $_POST['nm_grupo'];
-                    $sql="UPDATE tb_grupo SET nm_grupo='$nm_grupo',id_grupo=$id_grupo  WHERE id_grupo=$id_grupo";
+             <h1>Cadastro de fornecedor</h1>
+             <form class='formulario' action="gravaFornecedor.php" method='post'>
+                
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >Nome do fornecedor</label>
+                  <input type="text" class="form-control" name="nm_fornecedor">
+               </div>
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >CNPJ do fornecedor</label>
+                  <input type="text" class="form-control" name="cnpj_fornecedor">
+               </div>
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >Cidade do fornecedor</label>
+                  <input type="text" class="form-control" name="fk_id_cidade">
+               </div>
+               <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">Enviar</button>             
+               </div>
+               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
 
-                    if (mysqli_query($mysql,$sql)) {
-                        mensagem("Grupo alterado com sucesso!!",'success');
-                    } else {
-                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
-                    }
-
-                ?>
-
-                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
+             </form>
             </div>
         </div>
     </div>  

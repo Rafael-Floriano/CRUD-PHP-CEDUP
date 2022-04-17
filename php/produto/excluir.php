@@ -27,11 +27,8 @@
 
                     $dados=mysqli_query($mysql,$sql);
 
-                    if ($dados) {
-                        mensagem('Dados deletados com sucesso','success');
-                    }else{
-                        mensagem('Não conseguimos deletar os dados, tente novamente mais tarde','danger');
-                    }
+                    header('location:pesquisa.php');
+
 
                     ?>
 

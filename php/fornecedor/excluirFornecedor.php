@@ -9,26 +9,33 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-UPDATE</title>
+    <title>CRUD-excluir</title>
   </head>
   <body>
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-                <?php
-                    include "../conexao.php";
-                    $id_grupo = $_POST['id_grupo'];
-                    $nm_grupo = $_POST['nm_grupo'];
-                    $sql="UPDATE tb_grupo SET nm_grupo='$nm_grupo',id_grupo=$id_grupo  WHERE id_grupo=$id_grupo";
+                    
+                    <?php 
 
-                    if (mysqli_query($mysql,$sql)) {
-                        mensagem("Grupo alterado com sucesso!!",'success');
-                    } else {
-                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
+                    include '../conexao.php';
+
+                    $id = $_GET['id'] ?? '';
+
+                    $sql = "DELETE FROM tb_fornecedor WHERE id_fornecedor=$id";
+
+                    $dados=mysqli_query($mysql,$sql);
+
+                    if ($dados) {
+                        mensagem('Dados deletados com sucesso','success');
+                    }else{
+                        mensagem('Não conseguimos deletar os dados, tente novamente mais tarde','danger');
                     }
 
-                ?>
+                    header('location:pesquisaCliente.php');
+
+                    ?>
 
                 <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
@@ -50,3 +57,4 @@
     -->
   </body>
 </html>
+

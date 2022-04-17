@@ -17,7 +17,7 @@
         <div class='row'>
             <div class='col'>    
                 <?php
-                    include "conexao.php";
+                    include "../conexao.php";
                     $id_produto = $_POST['id_produto'];
                     $nm_produto = $_POST['nm_produto'];
                     $valorCompra = $_POST['valorCompra'];

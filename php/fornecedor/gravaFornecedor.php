@@ -9,7 +9,7 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-UPDATE</title>
+    <title>CRUD-Cadastro</title>
   </head>
   <body>
 
@@ -18,14 +18,19 @@
             <div class='col'>    
                 <?php
                     include "../conexao.php";
-                    $id_grupo = $_POST['id_grupo'];
-                    $nm_grupo = $_POST['nm_grupo'];
-                    $sql="UPDATE tb_grupo SET nm_grupo='$nm_grupo',id_grupo=$id_grupo  WHERE id_grupo=$id_grupo";
+
+                    $nm_cliente = $_POST['nm_fornecedor'];
+                    $cpf_cliente = $_POST['cnpj_fornecedor'];
+                    $fk_id_cidade = $_POST['fk_id_cidade'];
+
+
+                    $sql="INSERT INTO tb_fornecedor(nm_fornecedor, cnpj_fornecedor, fk_id_cidade) 
+                    VALUES ('$nm_cliente','$cpf_cliente','$fk_id_cidade')";
 
                     if (mysqli_query($mysql,$sql)) {
-                        mensagem("Grupo alterado com sucesso!!",'success');
+                        mensagem("O Fornecedor foi cadastrado com sucesso!!",'success');
                     } else {
-                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
+                        mensagem("O cadastro não pode ser feito, tente novamente :(",'danger');
                     }
 
                 ?>
