@@ -17,8 +17,7 @@
    include '../conexao.php';
    
    $id = $_GET['id'] ?? '';
-   $sql= "SELECT * FROM tb_produto WHERE id_produto=$id";
-
+   $sql= "SELECT * FROM tb_cliente WHERE id_cliente=$id";
    $dados = mysqli_query($mysql,$sql);
    $linha= mysqli_fetch_assoc($dados);
 
@@ -29,34 +28,28 @@
         <div class='row'>
             <div class='col'>    
              <h1>Editando</h1>
-             <form class='formulario' action="grava-edit.php" method='post'>
+             <form class='formulario' action="gravaCliente-edit.php" method='post'>
             
              <div class="mb-3">
-                <label for="nm_produto" class="form-label" >Nome do Produto</label>
-                <input type="text" class="form-control" name="nm_produto" value="<?php echo $linha['nm_produto'] ?>">
+                <label for="nm_produto" class="form-label" >Id do cliente</label>
+                <input type="text" class="form-control" name="id_cliente" value="<?php echo $linha['id_cliente'] ?>">
              </div>
              <div class="mb-3">
-                <label for="valorCompra" class="form-label">Valor de Compra</label>
-                <input type="text" class="form-control" name="valorCompra" value="<?php echo $linha['valorCompra'] ?>">
+                <label for="valorCompra" class="form-label">Nome do cliente</label>
+                <input type="text" class="form-control" name="nm_cliente" value="<?php echo $linha['nm_cliente'] ?>">
              </div>
              <div class="mb-3">
-                <label for="valorVenda" class="form-label">Valor de Venda</label>
-                <input type="text" class="form-control" name="valorVenda" value="<?php echo $linha['valorVenda'] ?>">
-             </div>
+                <label for="valorCompra" class="form-label">CPF do cliente</label>
+                <input type="text" class="form-control" name="cpf_cliente" value="<?php echo $linha['cpf_cliente'] ?>">
+             </div>  
              <div class="mb-3">
-                <label for="obs" class="form-label">Observação</label>
-                <textarea class='form-control' name="obs" id="obs" cols="30" rows="10"><?php echo $linha['obs'] ?></textarea>
-             </div>
-             <div class="mb-3">
-                <label for="id_grupo" class="form-label">Id do grupo Fornecedor</label>
-                <input type="text" class="form-control" name="id_grupo" value="<?php echo $linha['fk_id_grupo'] ?>">
-             </div>
+                <label for="valorCompra" class="form-label">Cidade do cliente</label>
+                <input type="text" class="form-control" name="fk_id_cidade" value="<?php echo $linha['fk_id_cidade'] ?>">
+             </div>   
              <div class="mb-3">
                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
-             </div>
-             <input type="hidden" name="id_produto" value="<?php echo $linha['id_produto'] ?>">
-
+             </div>       
              </form>
             </div>
         </div>

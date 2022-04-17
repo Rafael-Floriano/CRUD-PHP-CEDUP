@@ -10,25 +10,42 @@
     <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-Editar</title>
   </head>
+
+  <?php
+   include '../conexao.php';
+   
+   $id = $_GET['id'] ?? '';
+   $sql= "SELECT * FROM tb_cidade WHERE id_cidade=$id";
+   $dados = mysqli_query($mysql,$sql);
+   $linha= mysqli_fetch_assoc($dados);
+
+  ?>
   <body class="fundoCadastro">
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
-                
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
-                  <input type="text" class="form-control" name="nm_grupo">
-               </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
-               </div>
+             <h1>Editando</h1>
+             <form class='formulario' action="gravaCidade-edit.php" method='post'>
+            
+             <div class="mb-3">
+                <label for="nm_produto" class="form-label" >Id da Cidade</label>
+                <input type="text" class="form-control" name="id_cidade" value="<?php echo $linha['id_cidade'] ?>">
+             </div>
+             <div class="mb-3">
+                <label for="valorCompra" class="form-label">Nome da Cidade</label>
+                <input type="text" class="form-control" name="nm_cidade" value="<?php echo $linha['nm_cidade'] ?>">
+             </div>
+             <div class="mb-3">
+                <label for="valorCompra" class="form-label">UF da Cidade</label>
+                <input type="text" class="form-control" name="uf_cidade" value="<?php echo $linha['uf_cidade'] ?>">
+             </div>     
+             <div class="mb-3">
+               <button type="submit" class="btn btn-primary">Salvar Alterações</button>
                <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
-
+             </div>       
              </form>
             </div>
         </div>

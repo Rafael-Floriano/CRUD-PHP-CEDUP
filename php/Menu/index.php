@@ -7,13 +7,14 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-Cadastro</title>
   </head>
-  <body>
+  <body class="fundoCadastro">
     
-    <div class='conteiner'>
+    <div class='conteiner rogerio'>
         <div class='row'>
             <div class='col'>    
             <div class="jumbotron">

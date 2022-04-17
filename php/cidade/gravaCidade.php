@@ -7,29 +7,34 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-Cadastro</title>
   </head>
-  <body class="fundoCadastro">
+  <body>
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
-                
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
-                  <input type="text" class="form-control" name="nm_grupo">
-               </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
-               </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
+                <?php
+                    include "../conexao.php";
 
-             </form>
+                    $nm_cidade = $_POST['nm_cidade'];
+                    $nm_uf = $_POST['uf_cidade'];
+
+
+                    $sql="INSERT INTO tb_cidade(nm_cidade, uf_cidade) 
+                    VALUES ('$nm_cidade','$nm_uf')";
+
+                    if (mysqli_query($mysql,$sql)) {
+                        mensagem("cidade cadastrada com sucesso!!",'success');
+                    } else {
+                        mensagem("O cadastro não pode ser feito, tente novamente :(",'danger');
+                    }
+
+                ?>
+
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

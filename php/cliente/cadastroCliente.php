@@ -17,12 +17,20 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
+             <h1>Cadastro de Cidades</h1>
+             <form class='formulario' action="gravaCliente.php" method='post'>
                 
                <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
-                  <input type="text" class="form-control" name="nm_grupo">
+                  <label for="nm_produto" class="form-label" >Nome do Cliente</label>
+                  <input type="text" class="form-control" name="nm_cliente">
+               </div>
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >CPF do Cliente</label>
+                  <input type="text" class="form-control" name="cpf_cliente">
+               </div>
+               <div class="mb-3">
+                  <label for="nm_produto" class="form-label" >Cidade do Cliente</label>
+                  <input type="text" class="form-control" name="fk_id_cidade">
                </div>
                <div class="mb-3">
                   <button type="submit" class="btn btn-primary">Enviar</button>             

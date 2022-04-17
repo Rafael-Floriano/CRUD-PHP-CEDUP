@@ -7,29 +7,32 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-UPDATE</title>
   </head>
-  <body class="fundoCadastro">
+  <body>
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
-                
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
-                  <input type="text" class="form-control" name="nm_grupo">
-               </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
-               </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
+                <?php
+                    include "../conexao.php";
+                    $id_cliente = $_POST['id_cliente'];
+                    $nm_cliente = $_POST['nm_cliente'];
+                    $cpf_cliente = $_POST['cpf_cliente'];
+                    $fk_id_cidade = $_POST['fk_id_cidade'];
+                    $sql="UPDATE tb_cliente SET id_cliente=$id_cliente,nm_cliente='$nm_cliente',cpf_cliente='$cpf_cliente',fk_id_cidade=$fk_id_cidade WHERE id_cliente=$id_cliente";
 
-             </form>
+                    if (mysqli_query($mysql,$sql)) {
+                        mensagem("Cliente alterado com sucesso!!",'success');
+                    } else {
+                        mensagem("Não foi possivel alterar, tente novamente :(",'danger');
+                    }
+
+                ?>
+
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

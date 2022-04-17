@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
     <title>CRUD-Editar</title>
@@ -21,7 +22,7 @@
    $linha= mysqli_fetch_assoc($dados);
 
   ?>
-  <body>
+  <body class="fundoCadastro">
 
     <div class='conteiner'>
         <div class='row'>
@@ -39,8 +40,8 @@
              </div>      
              <div class="mb-3">
                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
              </div>       
-             <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
              </form>
             </div>
         </div>

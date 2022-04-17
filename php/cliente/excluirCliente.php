@@ -7,29 +7,37 @@
 
     <!-- Bootstrap CSS -->
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
 
-    <title>CRUD-Cadastro</title>
+    <title>CRUD-excluir</title>
   </head>
-  <body class="fundoCadastro">
+  <body>
 
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
-                
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
-                  <input type="text" class="form-control" name="nm_grupo">
-               </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
-               </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
+                    
+                    <?php 
 
-             </form>
+                    include '../conexao.php';
+
+                    $id = $_GET['id'] ?? '';
+
+                    $sql = "DELETE FROM tb_cliente WHERE id_cliente=$id";
+
+                    $dados=mysqli_query($mysql,$sql);
+
+                    if ($dados) {
+                        mensagem('Dados deletados com sucesso','success');
+                    }else{
+                        mensagem('Não conseguimos deletar os dados, tente novamente mais tarde','danger');
+                    }
+
+                    header('location:pesquisaCliente.php');
+
+                    ?>
+
+                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  
@@ -49,3 +57,4 @@
     -->
   </body>
 </html>
+

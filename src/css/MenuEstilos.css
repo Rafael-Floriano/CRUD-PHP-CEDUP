@@ -1,8 +1,9 @@
+@import "global.css";
+@import "form.css";
+
 body{
-    background-color: #7289da;
+    background:#7289da;
 }
-
-
 
 .Menu{
     color: #FFFFFF;
@@ -40,7 +41,4 @@ body{
     gap: 20px;
 }
 
-.div-voltar{
-    padding-top: 30px;
-}
 
