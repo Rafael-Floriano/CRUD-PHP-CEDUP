@@ -9,6 +9,7 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/index.css">
 
     <title>CRUD-Cadastro</title>
   </head>
@@ -17,15 +18,23 @@
     <div class='conteiner rogerio'>
         <div class='row'>
             <div class='col'>    
-            <div class="jumbotron">
-                <h1 class="display-4">Bem-vindo a interface do CRUD!</h1>
-                <p class="lead">CRUD da Aula do Eraldo(^^)</p>
+            <div class="jumbotron text-jumbotron">
+                <div class="menu-texto">
+                  <h1 class="display-4">Bem-vindo a interface do CRUD!</h1>
+                  <p class="lead">CRUD da Aula do Eraldo(^^)</p>
+                </div>
                 <hr class="my-4">
-                <p>Escolha as funções como desejar:</p>
-                <!-- <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastro</a> -->
-                <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
-                <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
-                <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Pesquisas</a>
+                <div class="menu-top">
+                  <div>
+                    <p>Escolha as funções como desejar:</p>
+                  </div>
+                  <!-- <a class="btn btn-primary btn-lg" href="./cadastro.php" role="button">Cadastro</a> -->
+                  <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
+                  <div class="menu-botoes">
+                    <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
+                    <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Pesquisas</a>
+                  </div>
+                </div>
 
             </div>
             </div>

@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/pesquisa.css">
 
+    <style>
+        *{
+     color: white;
+     text-align:center;
+    }
+    body{
+        background-color: #2c2f33;
+    }
+    </style>
+
     <title>CRUD-Pesquisa</title>
   </head>
   <body>
@@ -28,8 +38,7 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-                <h1>Pesquisar</h1>
-                <nav class="navbar navbar-light bg-light">
+                <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
                         <a class="navbar-brand">Tabela de produtos</a>
                         <form class="d-flex" action="./pesquisa.php" method="POST">
@@ -38,7 +47,7 @@
                         </form>
                     </div>
                 </nav>
-                <table id='tabela-pesquisa' class="table table-hover table-striped">
+                <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Nome Produto</th>
@@ -46,7 +55,7 @@
                             <th scope="col">Valor da Venda</th>
                             <th scope="col">Observação</th>
                             <th scope="col">Nome grupo</th>
-                            <th scope="col">Funções</th>                    
+                            <th colspan="2">Funções</th>                    
 
                         </tr>
                     </thead>
