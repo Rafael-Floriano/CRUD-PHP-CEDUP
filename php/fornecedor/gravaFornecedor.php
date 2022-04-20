@@ -27,8 +27,12 @@
                     $sql="INSERT INTO tb_fornecedor(nm_fornecedor, cnpj_fornecedor, fk_id_cidade) 
                     VALUES ('$nm_cliente','$cpf_cliente','$fk_id_cidade')";
 
+                    $hack = "SET FOREIGN_KEY_CHECKS=0";
+                    mysqli_query($mysql,$hack);
+                    $hackcancel = "SET FOREIGN_KEY_CHECKS=1";
                     if (mysqli_query($mysql,$sql)) {
-                        mensagem("O Fornecedor foi cadastrado com sucesso!!",'success');
+                        mensagem("Fornecedor cadastrado com sucesso!!",'success');
+                        mysqli_query($mysql,$hackcancel);
                     } else {
                         mensagem("O cadastro não pode ser feito, tente novamente :(",'danger');
                     }

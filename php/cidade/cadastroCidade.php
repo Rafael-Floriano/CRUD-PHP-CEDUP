@@ -28,11 +28,10 @@
                   <label for="nm_produto" class="form-label" >UF da Cidade</label>
                   <input type="text" class="form-control" name="uf_cidade">
                </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
+               <div class="mb-3 d-flex align-items-center justify-content-end">
+                  <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>
+                  <a class="btn btn-primary" href="../Menu/index.php" role="button">Voltar para Início</a>         
                </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
-
              </form>
             </div>
         </div>

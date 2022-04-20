@@ -1,3 +1,7 @@
+<?php
+   include '../conexao.php';
+?>
+
 <!doctype html>
 <html lang="PT-br">
   <head>
@@ -36,13 +40,22 @@
                 <label for="obs" class="form-label">Observação</label>
                 <textarea class='form-control' name="obs" id="obs" cols="30" rows="10"></textarea>
              </div>
-             <div class="mb-3">
-                <label for="id_grupo" class="form-label">Id do grupo Fornecedor</label>
-                <input type="text" class="form-control" name="id_grupo">
-             </div>
-             <div class="mb-3">
-             <button type="submit" class="btn btn-primary">Enviar</button>
-             <a class="btn btn-info" href="../menu/index.php" role="button">Voltar para Início</a>
+            <div class="mb-3 select d-flex align-items-center justify-content-end">
+               <select name='id_grupo' class="form-select" aria-label="Default select example" style="width:600px; margin-right:20px;">
+                  <option selected>Fornecedores</option>
+                  <?php
+                     $sql = "SELECT * FROM tb_fornecedor";
+                     $resultado = mysqli_query($mysql,$sql);
+                     while ($linha = mysqli_fetch_assoc($resultado)) {
+                        echo "<option value='$linha[id_fornecedor]'>$linha[nm_fornecedor]</option>";
+                     }
+                  ?>
+               </select>
+               <a href="../fornecedor/cadastroFornecedor.php" class="btn btn-dark">Cadastrar Fornecedor</a>
+            </div>
+             <div class="mb-3 d-flex align-items-center justify-content-end">
+             <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>
+             <a class="btn btn-primary" href="../menu/index.php" role="button">Voltar para Início</a>
              </div>
              </form>
             </div>

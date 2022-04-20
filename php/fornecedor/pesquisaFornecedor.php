@@ -41,9 +41,9 @@
             <div class='col'>    
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Tabela de produtos</a>
+                        <a class="navbar-brand">Tabela de fornecedores</a>
                         <form class="d-flex" action="./pesquisaFornecedor.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
+                            <input class="form-control me-2" type="search" placeholder="Nome do fornecedores" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>

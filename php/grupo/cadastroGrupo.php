@@ -18,17 +18,15 @@
         <div class='row'>
             <div class='col'>    
              <h1>Cadastro</h1>
-             <form class='formulario' action="gravaGrupo.php" method='post'>
-                
+             <form class='formulario' action="gravaGrupo.php" method='post'>   
                <div class="mb-3">
                   <label for="nm_produto" class="form-label" >Nome do Grupo</label>
                   <input type="text" class="form-control" name="nm_grupo">
                </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
+               <div class="mb-3 select d-flex align-items-center justify-content-end">
+                  <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>   
+                  <a class="btn btn-primary" href="../Menu/index.php" role="button">Voltar para Início</a>          
                </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
-
              </form>
             </div>
         </div>

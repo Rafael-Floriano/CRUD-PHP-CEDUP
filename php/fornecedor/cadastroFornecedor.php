@@ -1,3 +1,7 @@
+<?php
+  include '../conexao.php';
+?>
+
 <!doctype html>
 <html lang="PT-br">
   <head>
@@ -20,23 +24,32 @@
              <h1>Cadastro de fornecedor</h1>
              <form class='formulario' action="gravaFornecedor.php" method='post'>
                 
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do fornecedor</label>
-                  <input type="text" class="form-control" name="nm_fornecedor">
+              <div class="mb-3">
+                <label for="nm_produto" class="form-label" >Nome do fornecedor</label>
+                <input type="text" class="form-control" name="nm_fornecedor">
+              </div>
+              <div class="mb-3">
+                <label for="nm_produto" class="form-label" >CNPJ do fornecedor</label>
+                <input type="text" class="form-control" name="cnpj_fornecedor">
+              </div>
+              <div class="mb-3 select d-flex align-items-center justify-content-end">
+                <select name="fk_id_cidade" class="form-select" aria-label="Default select example" style="width:640px; margin-right:15px;"> 
+                      <option selected>Cidades</option>
+                      <?php
+                        $sql = "SELECT * FROM tb_cidade";
+                        $resultado = mysqli_query($mysql,$sql);
+                        while ($linha = mysqli_fetch_assoc($resultado)) {
+                            echo "<option value='$linha[id_cidade]'>$linha[nm_cidade]</option>";
+                        }
+                      ?>
+                </select> 
+                <a href="../cidade/cadastroCidade.php" class="btn btn-dark">Cadastrar cidade</a>
+                
+              </div>
+               <div class="mb-3 d-flex align-items-center justify-content-end">
+                  <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>
+                  <a class="btn btn-primary" href="../Menu/index.php" role="button">Voltar para Início</a>             
                </div>
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >CNPJ do fornecedor</label>
-                  <input type="text" class="form-control" name="cnpj_fornecedor">
-               </div>
-               <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Cidade do fornecedor</label>
-                  <input type="text" class="form-control" name="fk_id_cidade">
-               </div>
-               <div class="mb-3">
-                  <button type="submit" class="btn btn-primary">Enviar</button>             
-               </div>
-               <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
-
              </form>
             </div>
         </div>
