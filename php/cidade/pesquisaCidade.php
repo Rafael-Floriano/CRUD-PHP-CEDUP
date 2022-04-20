@@ -40,9 +40,9 @@
             <div class='col'>    
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Tabela de produtos</a>
+                        <a class="navbar-brand">Tabela das cidades</a>
                         <form class="d-flex" action="./pesquisaCidade.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
+                            <input class="form-control me-2" type="search" placeholder="Nome da cidade" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>
@@ -50,7 +50,7 @@
                 <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Id Cidade</th>
+                            <th scope="col">Código da cidade</th>
                             <th scope="col">Nome da cidade</th>
                             <th scope="col">UF da cidade</th>
                             <th colspan="2">Funções</th>                    

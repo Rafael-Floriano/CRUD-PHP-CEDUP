@@ -27,7 +27,7 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Editando</h1>
+             <h1>Editor de registros(Grupo)</h1>
              <form class='formulario' action="gravaGrupo-edit.php" method='post'>
             
              <div class="mb-3">

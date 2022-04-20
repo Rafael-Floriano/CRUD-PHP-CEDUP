@@ -27,7 +27,7 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Editando</h1>
+             <h1>Editor de registros(Fornecedor)</h1>
              <form class='formulario' action="gravaFornecedor-edit.php" method='post'>
             
              <div class="mb-3">

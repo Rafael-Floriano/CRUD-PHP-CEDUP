@@ -50,12 +50,12 @@
                 </nav>
                 <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
-                        <tr>
-                            <th scope="col">Id Cliente</th>
-                            <th scope="col">Nome do cliente</th>
-                            <th scope="col">CPF do cliente</th>
-                            <th scope="col">Cidade do Cliente</th>
-                            <th colspan="2">Funções</th>                    
+                        <tr class="text-center">
+                            <th scope="col">Código do fornecedor</th>
+                            <th scope="col">Nome do fornecedor</th>
+                            <th scope="col">CNPJ do fornecedor</th>
+                            <th scope="col">Cidade do fornecedor</th>
+                            <th colspan="2" style="padding-bottom:20px;">Funções</th>                    
                         </tr>
                     </thead>
                     <tbody>

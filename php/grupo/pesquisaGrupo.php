@@ -38,12 +38,11 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-                <h1>Pesquisar</h1>
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Tabela de produtos</a>
+                        <a class="navbar-brand">Tabela do Grupo</a>
                         <form class="d-flex" action="./pesquisaGrupo.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
+                            <input class="form-control me-2" type="search" placeholder="Nome do Grupo" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>
@@ -51,8 +50,8 @@
                 <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Id grupo</th>
-                            <th scope="col">Nome dos Grupo</th>
+                            <th scope="col">Código do grupo</th>
+                            <th scope="col">Nome do Grupo</th>
                             <th colspan="2">Funções</th>                    
                         </tr>
                     </thead>

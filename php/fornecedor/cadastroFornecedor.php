@@ -21,7 +21,7 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro de fornecedor</h1>
+             <h1>Cadastro de fornecedores</h1>
              <form class='formulario' action="gravaFornecedor.php" method='post'>
                 
               <div class="mb-3">

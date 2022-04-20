@@ -17,7 +17,7 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro</h1>
+             <h1>Cadastro de Grupos</h1>
              <form class='formulario' action="gravaGrupo.php" method='post'>   
                <div class="mb-3">
                   <label for="nm_produto" class="form-label" >Nome do Grupo</label>

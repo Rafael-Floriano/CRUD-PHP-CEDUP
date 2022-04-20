@@ -21,7 +21,7 @@
         <div class='row'>
             <div class='col'>    
             
-             <h1>Cadastro</h1>
+             <h1>Cadastro de Produtos</h1>
              <form class='formulario' action="grava.php" method='post'>
             
              <div class="mb-3">
@@ -41,17 +41,17 @@
                 <textarea class='form-control' name="obs" id="obs" cols="30" rows="10"></textarea>
              </div>
             <div class="mb-3 select d-flex align-items-center justify-content-end">
-               <select name='id_grupo' class="form-select" aria-label="Default select example" style="width:600px; margin-right:20px;">
-                  <option selected>Fornecedores</option>
+               <select name='id_grupo' class="form-select" aria-label="Default select example" style="width:630px; margin-right:20px;">
+                  <option selected>Grupos</option>
                   <?php
-                     $sql = "SELECT * FROM tb_fornecedor";
+                     $sql = "SELECT * FROM tb_grupo";
                      $resultado = mysqli_query($mysql,$sql);
                      while ($linha = mysqli_fetch_assoc($resultado)) {
-                        echo "<option value='$linha[id_fornecedor]'>$linha[nm_fornecedor]</option>";
+                        echo "<option value='$linha[id_grupo]'>$linha[nm_grupo]</option>";
                      }
                   ?>
                </select>
-               <a href="../fornecedor/cadastroFornecedor.php" class="btn btn-dark">Cadastrar Fornecedor</a>
+               <a href="../fornecedor/cadastroGrupo.php" class="btn btn-dark">Cadastrar Grupos</a>
             </div>
              <div class="mb-3 d-flex align-items-center justify-content-end">
              <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>

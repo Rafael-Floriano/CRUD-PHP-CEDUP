@@ -32,7 +32,7 @@
                   <!-- <a class="btn btn-primary btn-lg" href="./pesquisa.php" role="button">Pesquisa</a> -->
                   <div class="menu-botoes">
                     <a class="btn btn-primary btn-lg" href="./indexCadastro.php" role="button">Cadastros</a>
-                    <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Pesquisas</a>
+                    <a class="btn btn-primary btn-lg" href="./indexPesquisa.php" role="button">Tabelas</a>
                   </div>
                 </div>
 

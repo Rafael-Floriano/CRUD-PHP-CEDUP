@@ -19,7 +19,7 @@
         <div class='col'>    
           <div class="jumbotron Menu">
             <div class="texto-Menu">
-              <h1 class="display-4 titulo">Cadastros!</h1>
+              <h1 class="display-4 titulo">Cadastros</h1>
               <p>Escolha o que você quer cadastrar:</p>
             </div>
             <div class= "opcoes-Menu">

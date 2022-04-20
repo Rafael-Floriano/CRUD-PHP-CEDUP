@@ -40,7 +40,7 @@
             <div class='col'>    
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Tabela de produtos</a>
+                        <a class="navbar-brand">Tabela do produto</a>
                         <form class="d-flex" action="./pesquisa.php" method="POST">
                             <input class="form-control me-2" type="search" placeholder="Nome do produto" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
@@ -50,12 +50,13 @@
                 <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
                         <tr>
+                            <th scope="col">Código do produto</th>
                             <th scope="col">Nome Produto</th>
                             <th scope="col">Valor da Compra</th>
                             <th scope="col">Valor da Venda</th>
-                            <th scope="col">Observação</th>
+                            <th scope="col" style='padding-bottom:20px;'>Observação</th>
                             <th scope="col">Nome grupo</th>
-                            <th colspan="2">Funções</th>                    
+                            <th colspan="2" style='padding-bottom:20px;'>Funções</th>                    
 
                         </tr>
                     </thead>
@@ -78,6 +79,7 @@
                             $fk_id_grupo=$linha['nm_grupo'];
 
                         echo "<tr>
+                            <td>$id_produto</td>
                             <td>$nm_produto</td>
                             <td>$valorCompra</td>
                             <td>$valorVenda</td>
