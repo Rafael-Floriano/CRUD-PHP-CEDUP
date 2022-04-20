@@ -17,10 +17,10 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Cadastro de Grupos</h1>
+             <h1>Cadastro de Categorias</h1>
              <form class='formulario' action="gravaGrupo.php" method='post'>   
                <div class="mb-3">
-                  <label for="nm_produto" class="form-label" >Nome do Grupo</label>
+                  <label for="nm_produto" class="form-label" >Nome da categoria</label>
                   <input type="text" class="form-control" name="nm_grupo">
                </div>
                <div class="mb-3 select d-flex align-items-center justify-content-end">

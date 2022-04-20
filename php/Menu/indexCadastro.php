@@ -24,7 +24,7 @@
             </div>
             <div class= "opcoes-Menu">
               <a class="btn btn-primary btn-lg btn-funcao" href="../produto/cadastro.php" role="button">Produtos</a>
-              <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/cadastroGrupo.php" role="button">Grupos</a>
+              <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/cadastroGrupo.php" role="button">Categorias</a>
               <a class="btn btn-primary btn-lg btn-funcao" href="../cidade/cadastroCidade.php" role="button">Cidades</a>
               <a class="btn btn-primary btn-lg btn-funcao" href="../cliente/cadastroCliente.php" role="button">Clientes</a>
               <a class="btn btn-primary btn-lg btn-funcao" href="../fornecedor/cadastroFornecedor.php" role="button">Fornecedores</a>

@@ -23,7 +23,7 @@
                   </div>
                   <div class="opcoes-Menu">
                     <a class="btn btn-primary btn-lg btn-funcao" href="../produto/pesquisa.php" role="button">Produtos</a>
-                    <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/pesquisaGrupo.php" role="button">Grupos</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../grupo/pesquisaGrupo.php" role="button">Categorias</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cidade/pesquisaCidade.php" role="button">Cidades</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cliente/pesquisaCliente.php" role="button">Clientes</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../fornecedor/pesquisaFornecedor.php" role="button">Fornecedores</a>

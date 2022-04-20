@@ -27,15 +27,15 @@
     <div class='conteiner'>
         <div class='row'>
             <div class='col'>    
-             <h1>Editor de registros(Grupo)</h1>
+             <h1>Editor de registros(Categoria)</h1>
              <form class='formulario' action="gravaGrupo-edit.php" method='post'>
             
              <div class="mb-3">
-                <label for="nm_produto" class="form-label" >Id do grupo</label>
+                <label for="nm_produto" class="form-label" >Id do categoria</label>
                 <input type="text" class="form-control" name="id_grupo" value="<?php echo $linha['id_grupo'] ?>">
              </div>
              <div class="mb-3">
-                <label for="valorCompra" class="form-label">Nome do Grupo</label>
+                <label for="valorCompra" class="form-label">Nome do categoria</label>
                 <input type="text" class="form-control" name="nm_grupo" value="<?php echo $linha['nm_grupo'] ?>">
              </div>      
              <div class="mb-3">
