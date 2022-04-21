@@ -67,6 +67,22 @@
                         tb_cidade ci ON forn.fk_id_cidade=ci.id_cidade WHERE nm_fornecedor LIKE '%$pesquisa%'";
 
                         $dados = mysqli_query($mysql,$sql);
+                        $linha=mysqli_fetch_assoc($dados);
+
+                        if($linha == 1){
+                            $linha ="";
+                        }elseif ($linha == 0) {
+                            echo "<tr>
+                                <td>Sem registros</td>
+                                <td>Sem registros</td>
+                                <td>Sem registros</td>
+                                <td>Sem registros</td>
+                                <td><a href='#' class='btn btn-warning'>Indisponível</a> 
+                                <td><a href='#' class='btn btn-warning'>Indisponível</a>
+                                </tr>";  
+                        }
+                        
+                        $dados = mysqli_query($mysql,$sql);
 
                         while ($linha=mysqli_fetch_assoc($dados)) {
                             $id_fornecedor=$linha['id_fornecedor'];

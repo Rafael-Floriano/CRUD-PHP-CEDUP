@@ -20,7 +20,7 @@
                 <div class="jumbotron Menu">
                   <div class="texto-Menu">
                     <h1 class="display-4 titulo">Tabelas</h1>
-                    <p>Escolha as pesquisas como desejar:</p>
+                    <p>Escolha as tabelas como desejar:</p>
                   </div>
                   <div class="opcoes-Menu">
                     <a class="btn btn-primary btn-lg btn-funcao" href="../produto/pesquisa.php" role="button">Produtos</a>

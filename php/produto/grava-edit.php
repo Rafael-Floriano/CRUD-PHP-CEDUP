@@ -24,6 +24,13 @@
                     $valorVenda = $_POST['valorVenda'];
                     $obs = $_POST['obs'];
                     $id_grupo = $_POST['id_grupo'];
+                    echo "$id_grupo";
+                    echo "$nm_produto";
+                    echo "$valorCompra";
+                    echo "$valorVenda";
+                    echo "$obs";
+                    echo "$id_produto";
+
 
                     $sql="UPDATE tb_produto SET nm_produto='$nm_produto',valorCompra=$valorCompra,
                     valorVenda=$valorVenda,obs='$obs',fk_id_grupo=$id_grupo WHERE id_produto=$id_produto";
