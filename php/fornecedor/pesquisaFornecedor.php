@@ -92,10 +92,10 @@
 
 
                         echo "<tr>
-                            <td>$id_fornecedor</td>
-                            <td>$nm_fornecedor</td>
-                            <td>$cnpj_fornecedor</td>
-                            <td>$fk_id_cidade</td>
+                            <td style='color: #ffc107;'>$id_fornecedor</td>
+                            <td style='color: #ffc107;'>$nm_fornecedor</td>
+                            <td style='color: #ffc107;'>$cnpj_fornecedor</td>
+                            <td style='color: #ffc107;'>$fk_id_cidade</td>
                             <td><a href='editarFornecedor.php?id=$id_fornecedor' class='btn btn-success'>Editar</a> 
                             <td><a href='excluirFornecedor.php?id=$id_fornecedor' class='btn btn-danger'>Excluir</a>
                             </tr>";

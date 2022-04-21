@@ -91,10 +91,10 @@
 
 
                         echo "<tr>
-                            <td>$id_cliente</td>
-                            <td>$nm_cliente</td>
-                            <td>$cpf_cliente</td>
-                            <td>$fk_id_cidade</td>
+                            <td style='color: #ffc107;'>$id_cliente</td>
+                            <td style='color: #ffc107;'>$nm_cliente</td>
+                            <td style='color: #ffc107;'>$cpf_cliente</td>
+                            <td style='color: #ffc107;'>$fk_id_cidade</td>
                             <td><a href='editarCliente.php?id=$id_cliente' class='btn btn-success'>Editar</a> 
                             <td><a href='excluirCliente.php?id=$id_cliente' class='btn btn-danger'>Excluir</a>
                             </tr>";

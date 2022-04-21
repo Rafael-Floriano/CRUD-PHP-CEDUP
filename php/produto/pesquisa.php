@@ -74,12 +74,12 @@
                             $linha ="";
                         }elseif ($linha == 0) {
                             echo "<tr>
-                                <td>Sem registros</td>
-                                <td>Sem registros</td>
-                                <td>Sem registros</td>
-                                <td>Sem registros</td>
-                                <td>Sem registros</td>
-                                <td>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
+                                <td style='color: #ffc107;'>Sem registros</td>
                                 <td><a href='#' class='btn btn-warning'>Indisponível</a> 
                                 <td><a href='#' class='btn btn-warning'>Indisponível</a>
                                 </tr>";  

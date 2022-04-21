@@ -86,9 +86,9 @@
                             $uf_cidade=$linha['uf_cidade'];
 
                         echo "<tr>
-                            <td>$id_cidade</td>
-                            <td>$nm_cidade</td>
-                            <td>$uf_cidade</td>
+                            <td style='color: #ffc107;'>$id_cidade</td>
+                            <td style='color: #ffc107;'>$nm_cidade</td>
+                            <td style='color: #ffc107;'>$uf_cidade</td>
                             <td><a href='editarCidade.php?id=$id_cidade' class='btn btn-success'>Editar</a> 
                             <td><a href='excluirCidade.php?id=$id_cidade' class='btn btn-danger'>Excluir</a>
                             </tr>";
