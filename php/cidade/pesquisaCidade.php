@@ -84,7 +84,10 @@
                 </table>
             </div>
         </div>
-        <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>     
+        <div class="d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary" href="../cidade/cadastroCidade.php" role="button">Cadastro de Cidades</a>
+            <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button" style="margin:0 0 0 20px;">Voltar para Início</a> 
+        </div>    
     </div>  
 
     <!-- Optional JavaScript; choose one of the two! -->

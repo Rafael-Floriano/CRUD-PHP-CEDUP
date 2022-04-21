@@ -9,6 +9,7 @@
     <link href="../../src/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../src/css/MenuEstilos.css">
     <link rel="stylesheet" href="../../src/css/style.css">
+    <link rel="stylesheet" href="../../src/css/hover.css">
 
     <title>CRUD-Cadastro</title>
   </head>
