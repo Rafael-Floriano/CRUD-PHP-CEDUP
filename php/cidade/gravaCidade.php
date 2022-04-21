@@ -34,7 +34,7 @@
 
                 ?>
 
-                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
+                <a href="./pesquisaCidade.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

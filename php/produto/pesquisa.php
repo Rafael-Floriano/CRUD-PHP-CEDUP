@@ -116,8 +116,8 @@
                 </table>
             </div>
         </div>
-        <div class=" d-flex align-items-center justify-content-center">
-            <a class="btn btn-primary" href="../produto/cadastro.php" role="button">Cadastrar de Produtos</a>
+        <div class="d-flex align-items-center justify-content-center">
+            <a class="btn btn-primary" href="../produto/cadastro.php" role="button">Cadastrar Produtos</a>
             <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button"style="margin:0 0 0 20px;">Voltar para Início</a>    
         </div> 
     </div>  

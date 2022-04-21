@@ -104,7 +104,7 @@
                     </tbody>
                 </table>
                 <div class="d-flex align-items-center justify-content-center">
-                    <a class="btn btn-primary" href="../cliente/cadastroCliente.php" role="button">Cadastro de Clientes</a>
+                    <a class="btn btn-primary" href="../cliente/cadastroCliente.php" role="button">Cadastar Clientes</a>
                     <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button" style="margin:0 0 0 20px;">Voltar para Início</a>
                 </div>   
             </div>

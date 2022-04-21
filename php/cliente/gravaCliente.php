@@ -31,7 +31,7 @@
                     mysqli_query($mysql,$hack);
                     $hackcancel = "SET FOREIGN_KEY_CHECKS=1";
                     if (mysqli_query($mysql,$sql)) {
-                        mensagem("Produto cadastrado com sucesso!!",'success');
+                        mensagem("Cliente cadastrado com sucesso!!",'success');
                         mysqli_query($mysql,$hackcancel);
                     } else {
                         mensagem("O cadastro não pode ser feito, tente novamente :(",'danger');
@@ -39,7 +39,7 @@
 
                 ?>
 
-                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
+                <a href="./pesquisaCliente.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

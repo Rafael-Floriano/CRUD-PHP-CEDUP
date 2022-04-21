@@ -42,12 +42,21 @@
                 <label for="valorCompra" class="form-label">CPF do cliente</label>
                 <input type="text" class="form-control" name="cpf_cliente" value="<?php echo $linha['cpf_cliente'] ?>">
              </div>  
-             <div class="mb-3">
-                <label for="valorCompra" class="form-label">Cidade do cliente</label>
-                <input type="text" class="form-control" name="fk_id_cidade" value="<?php echo $linha['fk_id_cidade'] ?>">
-             </div>   
-             <div class="mb-3">
-               <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+             <div class="mb-3 select d-flex align-items-center justify-content-end">
+               <select name='fk_id_cidade' class="form-select" aria-label="Default select example" style="width:630px; margin-right:16px;">
+                  <option selected>Cidade</option>
+                  <?php
+                     $sql = "SELECT * FROM tb_cidade";
+                     $resultado = mysqli_query($mysql,$sql);
+                     while ($linha = mysqli_fetch_assoc($resultado)) {
+                        echo "<option value='$linha[id_cidade]'>$linha[nm_cidade]</option>";
+                     }
+                  ?>
+               </select>
+               <a href="../cidade/cadastroCidade.php" class="btn btn-dark">Cadastrar Cidades</a>
+            </div>
+             <div class="mb-3 d-flex align-items-center justify-content-end">
+               <button type="submit" class="btn btn-primary" style="margin-right:508px;">Salvar Alterações</button>
                <a class="btn btn-info" href="../Menu/index.php" role="button">Voltar para Início</a>
              </div>       
              </form>

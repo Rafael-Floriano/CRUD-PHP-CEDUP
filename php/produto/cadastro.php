@@ -51,7 +51,7 @@
                      }
                   ?>
                </select>
-               <a href="../grupo/cadastroGrupo.php" class="btn btn-dark">Cadastrar Grupos</a>
+               <a href="../grupo/cadastroGrupo.php" class="btn btn-dark">Cadastrar Categoria</a>
             </div>
              <div class="mb-3 d-flex align-items-center justify-content-end">
              <button type="submit" class="btn btn-primary" style="margin-right:585px;">Enviar</button>

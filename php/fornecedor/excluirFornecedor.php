@@ -33,11 +33,11 @@
                         mensagem('Não conseguimos deletar os dados, tente novamente mais tarde','danger');
                     }
 
-                    header('location:pesquisaCliente.php');
+                    header('location:pesquisaFornecedor.php');
 
                     ?>
 
-                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
+                <a href="./pesquisaFornecedor.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  

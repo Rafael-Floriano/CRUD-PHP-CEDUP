@@ -39,7 +39,7 @@
 
                 ?>
 
-                <a href="../Menu/index.php" class="btn btn-primary">Voltar</a>
+                <a href="./pesquisaFornecedor.php" class="btn btn-primary">Voltar</a>
             </div>
         </div>
     </div>  
