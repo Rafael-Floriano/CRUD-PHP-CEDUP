@@ -20,7 +20,7 @@
         }
     </style>
 
-    <title>CRUD-PesquisaVendedor-Rafinha</title>
+    <title>CRUD-PesquisaGrupo-Rafinha</title>
   </head>
   <body>
 
@@ -40,9 +40,9 @@
             <div class='col'>    
                 <nav class="navbar navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand">Tabela das cidades</a>
-                        <form class="d-flex" action="./pesquisaVendedor.php" method="POST">
-                            <input class="form-control me-2" type="search" placeholder="Nome do vendedor" aria-label="Search" name="busca" autofocus>
+                        <a class="navbar-brand">Tabela das Pedido</a>
+                        <form class="d-flex" action="./pesquisaPedido.php" method="POST">
+                            <input class="form-control me-2" type="search" placeholder="Id do pedido" aria-label="Search" name="busca" autofocus>
                             <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                         </form>
                     </div>
@@ -50,7 +50,8 @@
                 <table id='tabela-pesquisa' class="table table-dark table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Código do Vendedor</th>
+                            <th scope="col">Código do pedido</th>
+                            <th scope="col">Nome do Cliente</th>
                             <th scope="col">Nome do Vendedor</th>
                             <th colspan="2">Funções</th>                    
                         </tr>
@@ -60,7 +61,8 @@
 
                         include '../conexao.php';
 
-                        $sql="SELECT * FROM tb_vendedor WHERE nm_vendedor LIKE '%$pesquisa%'";
+                        $sql="SELECT ped.id_pedido, cli.nm_cliente, ved.nm_vendedor FROM tb_venda ped INNER JOIN tb_cliente cli 
+                        ON ped.fk_id_cliente = cli.id_cliente INNER JOIN tb_vendedor ved ON ved.id_vendedor = ped.fk_id_vendedor WHERE ped.id_pedido LIKE '%$pesquisa%'";
 
                         $dados = mysqli_query($mysql,$sql);
                         $linha=mysqli_fetch_assoc($dados);
@@ -80,14 +82,16 @@
                         $dados = mysqli_query($mysql,$sql);
 
                         while ($linha=mysqli_fetch_assoc($dados)) {
-                            $id_vendedor=$linha['id_vendedor'];
+                            $id_pedido=$linha['id_pedido'];
+                            $nm_cliente=$linha['nm_cliente'];
                             $nm_vendedor=$linha['nm_vendedor'];
 
                         echo "<tr>
-                            <td style='color: #ffc107;'>$id_vendedor</td>
+                            <td style='color: #ffc107;'>$id_pedido</td>
+                            <td style='color: #ffc107;'>$nm_cliente</td>
                             <td style='color: #ffc107;'>$nm_vendedor</td>
-                            <td><a href='editarVendedor.php?id=$id_vendedor' class='btn btn-success'>Editar</a> 
-                            <td><a href='excluirVendedor.php?id=$id_vendedor' class='btn btn-danger'>Excluir</a>
+                            <td><a href='editarPedido.php?id=$id_pedido' class='btn btn-success'>Editar</a> 
+                            <td><a href='excluirPedido.php?id=$id_pedido' class='btn btn-danger'>Excluir</a>
                             </tr>";
                         }
 
@@ -97,7 +101,7 @@
             </div>
         </div>
         <div class="d-flex align-items-center justify-content-center">
-            <a class="btn btn-primary" href="./cadastroVendedor.php" role="button">Cadastrar Vendedor</a>
+            <a class="btn btn-primary" href="./cadastroPedido.php" role="button">Cadastrar Pedidos</a>
             <a id="btn-voltar" class="btn btn-info" href="../Menu/index.php" role="button" style="margin:0 0 0 20px;">Voltar para Início</a> 
         </div>    
     </div>  
