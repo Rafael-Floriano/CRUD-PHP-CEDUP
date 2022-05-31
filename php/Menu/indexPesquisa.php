@@ -30,7 +30,7 @@
                     <a class="btn btn-primary btn-lg btn-funcao" href="../fornecedor/pesquisaFornecedor.php" role="button">Fornecedores</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../vendedor/pesquisaVendedor.php" role="button">Vendedores</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../pedido/pesquisaPedido.php" role="button">Pedidos</a>
-                    <a class="btn btn-primary btn-lg btn-funcao" href="../vendedor/cadastroVendedor.php" role="button">Histórico Vendas</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../itens/pesquisaItens.php" role="button">Histórico Vendas</a>
                     <a class="btn btn-info botao-voltar" href="../Menu/index.php" role="button">Voltar para Início</a>
                   </div>
                 </div>
