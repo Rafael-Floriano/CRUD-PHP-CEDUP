@@ -17,7 +17,7 @@
         <div class='conteiner'>
             <div class='row'>
                 <div class='col'>    
-                <div class="jumbotron Menu" style="margin-top:0px;">
+                <div class="jumbotron Menu" style="margin-bottom:20px; height: 795px;">
                   <div class="texto-Menu">
                     <h1 class="display-4 titulo">Tabelas</h1>
                     <p>Escolha as tabelas como desejar:</p>
@@ -28,6 +28,9 @@
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cidade/pesquisaCidade.php" role="button">Cidades</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../cliente/pesquisaCliente.php" role="button">Clientes</a>
                     <a class="btn btn-primary btn-lg btn-funcao" href="../fornecedor/pesquisaFornecedor.php" role="button">Fornecedores</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../vendedor/pesquisaVendedor.php" role="button">Vendedores</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../vendedor/cadastroVendedor.php" role="button">Pedidos</a>
+                    <a class="btn btn-primary btn-lg btn-funcao" href="../vendedor/cadastroVendedor.php" role="button">Histórico Vendas</a>
                     <a class="btn btn-info botao-voltar" href="../Menu/index.php" role="button">Voltar para Início</a>
                   </div>
                 </div>
